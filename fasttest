@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/data/data/com.termux/files/usr/bin/bash
 #              bash 4.3.11(1)     Linux Ubuntu 14.04.1        Date : 2017-03-07
 #
 # _______________|  fasttest : download speed in Mbps, flag to log results.
@@ -56,9 +56,9 @@ arg2=${2:-'fasttest.log'}
 #         ^default name for logfile, see $logf below.
 
 program=${0##*/}   #  similar to using basename
-memf=$( mktemp /dev/shm/88_${program}_tmp.XXXXXXXXXX )
-mem2=$( mktemp /dev/shm/88_${program}_tmp.XXXXXXXXXX )
-errf=$( mktemp /dev/shm/88_${program}_tmp.XXXXXXXXXX )
+memf=$( mktemp $TMPDIR/88_${program}_tmp.XXXXXXXXXX )
+mem2=$( mktemp $TMPDIR/88_${program}_tmp.XXXXXXXXXX )
+errf=$( mktemp $TMPDIR/88_${program}_tmp.XXXXXXXXXX )
 
 
 cleanup () {
@@ -86,7 +86,7 @@ trap "die 'unhandled ERR via trap, but cleanup finished.' 116" ERR
 # _______________     ::  BEGIN  Script ::::::::::::::::::::::::::::::::::::::::
 
 
-logdir="$HOME/var/log/net"
+logdir="$HOME/logs/net"
 #      ^RENAME log directory for your personal use; for --log option.
 
 [ -d "$logdir" ]  ||  mkdir -p "$logdir"  ||  die "fail creating $logdir" 117
