@@ -1,8 +1,13 @@
-# speedtest-linux
+# Internet Speed Tests
 
-From the command line get ping/download/upload stats:
+A set of handy *Bash scripts* to *check how fast or slow your Internet connection really is*.
+This documentation is targeted at *users having Termux installed on their Android phones*.
 
-- from https://speedtest.net or https://fast.com
+## speedtest
+
+From within your [Termux](https://wiki.termux.com) terminal, get your Internet connection's ping/download/upload stats:
+
+- from [SpeedTest](https://speedtest.net) or [FastCom](https://fast.com)
 - *without* their ads
 - *without* their web GUI or app interface
 - simply **timestamped** in one-line CSV format
@@ -98,10 +103,10 @@ To fine-tune the logging functions, please fork our repository.
 Many thanks to the developers upstream: @sivel and @sanderjo -- 
 we rely on their latest updates to the Python source code.
 
-Shortcut to this project: https://git.io/speed
+Quickly access the original project via [Project Shortcut](https://git.io/speed)
 
 
 ---
 
-README.md update : 2017-03-09
+README.md update : 2020-03-27
 
